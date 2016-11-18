@@ -1,6 +1,6 @@
 """
 
-Implementation of multi thread server
+Implementation of multi thread server using requests
 
 """
 from sys import argv

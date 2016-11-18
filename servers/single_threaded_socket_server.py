@@ -1,3 +1,8 @@
+"""
+
+Implementation of multi thread server using sockets
+
+"""
 from threading import Thread
 from socket import socket, AF_INET, SOCK_STREAM
 from handlers.socket_handler import socket_connection_handler
