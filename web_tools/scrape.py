@@ -151,7 +151,7 @@ def download_file(url, proxy, filename):
 
 if __name__ == "__main__":
 
-    #root = 'http://www.automatetheboringstuff.com'
+    # root = 'http://www.automatetheboringstuff.com'
     # root = 'http://www.python.org'
     root = 'http://www.telegraph.co.uk'
     parsed_root = urlparse(root)
@@ -166,7 +166,7 @@ if __name__ == "__main__":
     singleton.downloaded = set()
 
     # For access in the office
-    #proxy_details = {"http": "http://127.0.0.1:3128"}
+    # proxy_details = {"http": "http://127.0.0.1:3128"}
     proxy_details = {}
 
     traverse_site(proxy_details,30)
@@ -180,8 +180,8 @@ if __name__ == "__main__":
     worker2 = ImageDownloaderTask()
 
     # Create thread for workers to run on
-    #thread1 = threading.Thread(target=worker1.run,args=("Thread 1", proxy_details))
-    #thread2 = threading.Thread(target=worker2.run,args=("Thread 2", proxy_details))
+    # thread1 = threading.Thread(target=worker1.run,args=("Thread 1", proxy_details))
+    # thread2 = threading.Thread(target=worker2.run,args=("Thread 2", proxy_details))
 
     thread1 = threading.Thread(target=download_images,args=("Thread 1", proxy_details))
     thread2 = threading.Thread(target=download_images,args=("Thread 2", proxy_details))
