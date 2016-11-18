@@ -169,7 +169,7 @@ if __name__ == "__main__":
     # proxy_details = {"http": "http://127.0.0.1:3128"}
     proxy_details = {}
 
-    traverse_site(proxy_details,30)
+    traverse_site(proxy_details, 30)
 
     # Create images directory if not exists
     if not os.path.exists('images'):
