@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python34
 """
 
 Implementation of multi thread server using requests
