@@ -10,7 +10,7 @@ class PersistableInt(PersistableBase):
         self.value = arg
 
     def create_from_args(self, arg):
-        self.value = arg
+        self.value = int(arg)
         return self
 
     def save_contents_on(self, out_stream):
@@ -29,7 +29,7 @@ class PersistableFloat(PersistableBase):
         self.value = arg
 
     def create_from_args(self, arg):
-        self.value = arg
+        self.value = float(arg)
         return self
 
     def save_contents_on(self, out_stream):
@@ -67,7 +67,7 @@ class PersistableIntVector(PersistableBase):
         self.contents = args
 
     def create_from_args(self, args):
-        self.contents = args
+        self.contents = [int(arg) for arg in args]
         return self
 
     def save_contents_on(self, out_stream):
@@ -75,6 +75,25 @@ class PersistableIntVector(PersistableBase):
 
     def restore_contents_from(self, in_stream):
         self.contents = in_stream.restore_numeric_array('i')
+
+    def __str__(self):
+        return str(self.contents)
+
+
+class PersistableFloatVector(PersistableBase):
+
+    def __init__(self, args=[]):
+        self.contents = args
+
+    def create_from_args(self, args):
+        self.contents = [float(arg) for arg in args]
+        return self
+
+    def save_contents_on(self, out_stream):
+        out_stream.save_numeric_array(self.contents, 'd')
+
+    def restore_contents_from(self, in_stream):
+        self.contents = in_stream.restore_numeric_array('d')
 
     def __str__(self):
         return str(self.contents)

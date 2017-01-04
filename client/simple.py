@@ -17,6 +17,7 @@ Factory().register(functors.Concatenate)
 Factory().register(persistables.PersistableInt)
 Factory().register(persistables.PersistableString)
 Factory().register(persistables.PersistableIntVector)
+Factory().register(persistables.PersistableFloatVector)
 Factory().register(persistables.PersistableStringVector)
 Factory().register(persistables.PersistableStudent)
 
