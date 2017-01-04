@@ -34,7 +34,7 @@ def make_functor_call(ip, port, functor_name, *args):
 def main():
     for i in range(1000):
         result = make_functor_call('localhost', 20000, 'PrintStudent', ['Mark','Day',21])
-        print(str(result))
+        print(i,str(result))
 
 if __name__ == "__main__":
     ip = argv[1]
