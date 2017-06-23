@@ -16,7 +16,7 @@ class FunctorSocketConnectionServer(object):
         self._t = Thread(target=self._run)
 
     def start(self):
-        print('Starting socket server on port ', self._port)
+        print('Starting socket server on port c', self._port)
         self._t.start()
 
     def _run(self):
