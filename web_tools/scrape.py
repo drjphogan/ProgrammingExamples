@@ -12,9 +12,7 @@ class ImageDownloaderTask:
     def run(self, id, proxy):
         print(id, 'starting.')
         download_images(id, proxy)
-        # this is total shit
-        # this is the fourth comment
-        # fifth comment
+
 
 # noinspection PyShadowingNames
 def traverse_site(proxy, max_links=20):
