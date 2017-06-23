@@ -14,6 +14,8 @@ class ImageDownloaderTask:
         download_images(id, proxy)
         # this is total shit
         # this is the fourth comment
+        # this is the third comment
+        # fifth commnet
 
 # noinspection PyShadowingNames
 def traverse_site(proxy, max_links=20):
